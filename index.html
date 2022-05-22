@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Technological Solutions</title>
+    <!-- Fuentes -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800' rel='stylesheet' type='text/css'>
+    <!-- Iconos -->
+    <link href="fonts/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <!-- Famework Reactivo-->
+    <script src="Vue/vue.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.mixitup.min.js"></script>
+    <script src="scripts/jquery.waypoints.min.js"></script>
+    <!-- Desarrollo JS -->
+    <script src="scripts/pt.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/modal.js"></script>
+</head>
+
+<body>
+    <div id="pt" class="canvas"></div>
+    <div class="overflow-wrap" id="Body">
+        <!-- Modal -->
+        <div class="modal-wrap flex">
+            <div class="mask"></div>
+            <div class="modal" id="modal">
+                <div class="carousel-wrap">
+                    <div class="window">
+                        <div id="carousel">
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                        </div>
+                        <i class="mdi mdi-chevron-left" id="prev"></i>
+                        <i class="mdi mdi-chevron-right" id="next"></i>
+                    </div>
+
+                </div>
+                <div class="info-box">
+                    <div class="title"></div>
+                    <div class="tag"></div>
+                    <div class="detail"></div>
+                    <a href="#" target="_blank">
+                        <div class="button"><i class="mdi mdi-open-in-new"></i>Ver Sitio Web</div>
+                    </a>
+                </div>
+                <i class="close mdi mdi-close"></i>
+            </div>
+        </div>
+        <!-- Inicio -->
+        <section id="home" class="flex height-fix">
+
+            <div class="flex">
+
+                <div class="text">
+                    Desarrollamos soluciones
+                    <br> a la medida de sus ideas
+                </div>
+                <div id="BntMenu">
+                    <div class="button" v-on:click="movement('about')">Vea nuestro trabajo <i class="mdi mdi-arrow-right"></i></div>
+
+                    <nav class="flex">
+                        <div class="link-wrap">
+                            <div dest="home" v-on:click="movement('home')">Inicio</div>
+                            <div dest="about" v-on:click="movement('about')">Nosotros</div>
+                            <div dest="portfolio" v-on:click="movement('portfolio')">Servicios</div>
+                            <div dest="blog" v-on:click="movement('blog')">Clientes</div>
+                            <div dest="contact" v-on:click="movement('contact')">contactenos</div>
+                        </div>
+                        <i class="mdi mdi-menu" v-on:click="mdi_menu()"></i>
+                    </nav>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="about">
+            <div class="container flex">
+
+                <div class="header waypoint" data-animation="slide-in-left">Nosotros</div>
+                <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+
+                <div class="flex row label-wrap">
+                    <div class="flex row-gt-sm">
+                        <div class="flex bullet-wrap ">
+                            <div class="hex-wrap waypoint" data-animation="flip-in-x">
+                                <div class="hexagon">
+                                    <i class="mdi mdi-eye"></i>
+                                </div>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in">
+                                <div class="label bold">Vision</div>
+                                <div style="text-align: justify;">Ser una empresa líder en el mercado de la tecnología, caracterizándonos por ser un aliado estratégico para nuestros clientes, ayudándolos a crecer como empresa, a fidelizar a sus clientes y a crear nuevas oportunidades
+                                    de negocio, siempre pesando en el desarrollo y éxito.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex bullet-wrap ">
+                            <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".2s">
+                                <div class="hexagon">
+                                    <i class="mdi mdi-briefcase"></i>
+                                </div>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".2s">
+                                <div class="label bold">Misión</div>
+                                <div style="text-align: justify;">Potenciar el negocio de nuestros clientes brindando las mejores alternativas tecnológicas que se encuentren en el mercado, haciéndolos así más calificados frente a sus competidores, siempre adaptando nuestras soluciones
+                                    a sus presupuestos. </div>
+                            </div>
+                        </div>
+
+                        <div class="flex bullet-wrap ">
+                            <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".4s">
+                                <div class="hexagon">
+                                    <i class="mdi mdi-office"></i>
+                                </div>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".4s">
+                                <div class="label bold">Nosotros</div>
+                                <div style="text-align: justify;">Somos una empresa de tecnología especializada en las soluciones informáticas con un fuerte componente estratégico y creativo. Ayudamos a las empresas a organizar y estructurar su información para la nueva era digital, priorizamos
+                                    tus objetivos y los convertimos en los nuestros.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="flex" id="portfolio">
+
+            <div class="header waypoint" data-animation="slide-in-right">SERVICIOS</div>
+            <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s"></div>
+
+            <div class="filter-wrap waypoint" data-animation="fade-in">
+                <div class="flex row">
+                    <div class="filter" id="all" data-filter="all" v-on:click="portfolio('all')">TODO</div>
+                    <div class="filter" id="inf" data-filter=".inf" v-on:click="portfolio('inf')">INFRAESTRUCTURA</div>
+                    <div class="filter" id="net" data-filter=".net" v-on:click="portfolio('net')">DESARROLLO .NET</div>
+                    <div class="filter" id="php" data-filter=".php" v-on:click="portfolio('.php')">DESARROLLO PHP</div>
+                </div>
+                <div class="float-bar">
+                    <div class="flex row">
+                        <div class="filter" data-filter="all">TODO</div>
+                        <div class="filter" data-filter=".inf">INFRAESTRUCTURA</div>
+                        <div class="filter" data-filter=".net">DESARROLLO .NET</div>
+                        <div class="filter" data-filter=".php">DESARROLLO PHP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gallery" class="container flex row wrap waypoint">
+                <div class="mix php" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Laravel</div>
+                            <span class="highlight">Desarrollo Personalisado</span>
+                        </div>
+                        <div class="button" id="roambi">Leer Mas</div>
+                    </div>
+                </div>
+
+                <div class="mix net" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Desarrollo web</div>
+                            <span class="highlight">Adaptable</span>
+                        </div>
+                        <div class="button" id="walker">Leer Mas</div>
+                    </div>
+                </div>
+
+                <div class="mix inf" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Cableado</div>
+                            <span class="highlight">Datos y ELectrico</span>
+                        </div>
+                        <div class="button" id="mystand">Leer Mas</div>
+                    </div>
+                </div>
+
+                <div class="mix php" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Gestores de Contenido</div>
+                            <span class="highlight">Joomla, worpress, drupal</span>
+                        </div>
+                        <div class="button" id="never">Leer Mas</div>
+                    </div>
+                </div>
+
+                <div class="mix net" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Software</div>
+                            <span class="highlight">Escalable y Robustos</span>
+                        </div>
+                        <div class="button" id="powur">Leer Mas</div>
+                    </div>
+                </div>
+
+
+                <div class="mix inf" data-my-order="1">
+                    <div>
+                        <div class="card"></div>
+                        <div class="text">
+                            <div class="bold">Servidores</div>
+                            <span class="highlight">Adecuacion y Configuracion</span>
+                        </div>
+                        <div class="button" id="themall">Leer Mas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <section class="flex" id="blog">
+            <div class="header waypoint" data-animation="slide-in-left">CLIENTES</div>
+            <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+            <img src="img/Seccion_En_Construccion.jpg">
+        </section>
+
+        <!-- CONTACTENOS -->
+        <section id="contact">
+            <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+                <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+            </svg>
+            <div class="container flex">
+                <div class="header waypoint" data-animation="slide-in-left">CONTACTENOS</div>
+                <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
+                <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">¿Tiene alguna pregunta o quiere que trabajemos juntos?</div>
+                <form class="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
+                    <input placeholder="Nombre" type="text" name="name" required>
+                    <input placeholder="E-mail" type="email" name="email" required>
+                    <textarea placeholder="Escribe tu mensaje" type="text" name="message"></textarea>
+                    <div id="success">
+                        <div>Su mensaje fue enviado exitosamente. Gracias!<span id="close" class="mdi mdi-close"></span>
+                        </div>
+                    </div>
+                    <input class="button" type="submit" id="submit" value=ENVIAR>
+                </form>
+            </div>
+        </section>
+
+        <footer id="Foother">
+            <i class="mdi mdi-chevron-double-up page-link" dest="home" v-on:click="movement('home')"></i>
+
+            <div class="icon-wrap flex row">
+                <a href="https://www.facebook.com/Technological-Solutions-106150974271593">
+                    <div class="flex icon" id="icon-2">
+                        <i class="mdi mdi-facebook"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="info-box">
+                <div class="footnote" id="Fecha">{{Message}}<span class="highlight">&copy;{{M_Date}}</span></div>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/canvas.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
