@@ -45,7 +45,7 @@ var Body = new Vue({
         },
         ScrollWindow: function() {
             var pos = $(window).scrollTop();
-            var pos2 = pos + 50;
+            var pos2 = pos + 150;
 
             if (!this.isMobile) {
                 if (pos >= this.navPos + $('nav').height() && this.lastPos < pos) {
