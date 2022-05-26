@@ -26,12 +26,12 @@ $(document).ready(function(){
     never: {
       title: 'CMS',
       tag: 'Gestores de Contenido',
-      detail: 'permite a los usuarios crear contenido sin necesidad de contar con conocimientos técnicos muy específicos. Es probable que hayáis oido hablar de algunos de los CMS más populares que solemos utilizar los programadores, como Drupal, WordPress, Joomla, El desarrollo basado en un CMS tiene una gran cantidad de ventajas que hacen que sea una opción muy recomendable a la hora de plantear una web',
+      detail: 'Permite a los usuarios crear contenido sin necesidad de contar con conocimientos técnicos muy específicos. Es probable que hayáis oido hablar de algunos de los CMS más populares que solemos utilizar los programadores, como Drupal, WordPress, Joomla, El desarrollo basado en un CMS tiene una gran cantidad de ventajas que hacen que sea una opción muy recomendable a la hora de plantear una web',
     },
     themall: {
       title: 'Servidores',
       tag: 'Adecuacion ',
-      detail: 'Contamos con un servicio de configuración e instalación de servidores empresariales que necesitan de ayuda de un ingeniero o técnico experto en la instalación, configuración y asesoramiento para su correcto funcionamiento en Colombia. Nuestro servicio de configuración e instalación de servidores cuentan con personal altamente especializado y entrenado en el manejo de relaciones interpersonales que le ayudarán a encontrar solución a sus requerimientos puntuales.',
+      detail: 'Contamos con servicios de configuración e instalación de servidores empresariales, los cuales necesitan ayuda de un ingeniero o técnico experto en la instalación, configuración y asesoramiento para su correcto funcionamiento en Colombia. Nuestro servicio de configuración e instalación de servidores cuentan con personal altamente especializado y entrenado en el manejo de relaciones interpersonales que le ayudarán a encontrar solución a sus requerimientos puntuales.',
     }
   };
 
